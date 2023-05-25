@@ -5,6 +5,8 @@ import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
 import 'package:periodic_table_app/product/widget/element_container.dart';
+import 'package:periodic_table_app/product/widget/element_group_container.dart';
+import 'package:periodic_table_app/product/widget/language_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -29,62 +31,11 @@ class HomeView extends StatelessWidget {
               SizedBox(height: context.dynamicHeight(0.05)),
               headerGroupText(context),
               SizedBox(height: context.dynamicHeight(0.02)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: AppColors().yellow,
-                    ),
-                    child: Center(
-                        child: Text(
-                      "METALİMSİ GRUBU",
-                      style: context.textTheme.bodyMedium?.copyWith(
-                        color: AppColors().background,
-                      ),
-                    )),
-                  ),
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(color: AppColors().yellow),
-                    child: Center(child: Text("data")),
-                  ),
-                ],
-              ),
+              elementGroupRowOne(context),
               SizedBox(height: context.dynamicHeight(0.04)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      color: AppColors().yellow,
-                    ),
-                    child: Center(child: Text("data")),
-                  ),
-                  Container(
-                    height: 150,
-                    width: 150,
-                    decoration: BoxDecoration(color: AppColors().yellow),
-                    child: Center(child: Text("data")),
-                  ),
-                ],
-              ),
-              Divider(
-                thickness: 2.0,
-                indent: 10.0,
-                endIndent: 10.0,
-                height: context.dynamicHeight(0.075),
-                color: AppColors().white,
-              ),
-              Row(
-                children: [],
-              ),
+              elementGroupRowTwo(context),
+              divider(context),
+              langAndHelpRow(context),
             ],
           ),
         ),
@@ -92,10 +43,88 @@ class HomeView extends StatelessWidget {
     );
   }
 
+  Row elementGroupRowTwo(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        elementGroupContainer(context),
+        elementGroupContainer(context),
+      ],
+    );
+  }
+
+  Row elementGroupRowOne(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        elementGroupContainer(context),
+        elementGroupContainer(context),
+      ],
+    );
+  }
+
+  Widget elementGroupContainer(BuildContext context) {
+    return ElementGroupContainer(
+      onTap: () {},
+      color: AppColors().purple,
+      title: "AMETAL GRUBU",
+    );
+  }
+
+  Divider divider(BuildContext context) {
+    return Divider(
+      thickness: 2.0,
+      indent: 10.0,
+      endIndent: 10.0,
+      height: context.dynamicHeight(0.075),
+      color: AppColors().white,
+    );
+  }
+
+  Row langAndHelpRow(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        languageButtonTR(context),
+        languageButtonUK(),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.help,
+            color: AppColors().white,
+            size: 30,
+          ),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.report,
+            color: AppColors().white,
+            size: 30,
+          ),
+        ),
+      ],
+    );
+  }
+
+  LanguageButton languageButtonUK() {
+    return LanguageButton(
+      asset: "assets/img/uk_flag.png",
+      onTap: () {},
+    );
+  }
+
+  Widget languageButtonTR(BuildContext context) {
+    return LanguageButton(
+      asset: "assets/img/turkish_flag.png",
+      onTap: () {},
+    );
+  }
+
   Text headerGroupText(BuildContext context) {
     return Text(
       AppStrings().groupOfElement,
-      style: context.textTheme.bodyMedium?.copyWith(
+      style: context.textTheme.labelLarge?.copyWith(
         color: AppColors().white,
       ),
     );
@@ -115,7 +144,7 @@ class HomeView extends StatelessWidget {
   Text headerElementText(BuildContext context) {
     return Text(
       AppStrings().elementOfDay,
-      style: context.textTheme.bodyMedium?.copyWith(
+      style: context.textTheme.labelLarge?.copyWith(
         color: AppColors().white,
       ),
     );
