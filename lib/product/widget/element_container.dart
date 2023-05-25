@@ -47,14 +47,14 @@ class ElementContainer extends StatelessWidget {
             ),
             Text(
               atomSymbol,
-              style: context.textTheme.displaySmall?.copyWith(
+              style: context.textTheme.headlineLarge?.copyWith(
                 color: AppColors().white,
               ),
             ),
             const Spacer(),
             Text(
               atomName,
-              style: context.textTheme.headlineMedium?.copyWith(
+              style: context.textTheme.headlineSmall?.copyWith(
                 color: AppColors().white,
                 fontWeight: FontWeight.bold,
               ),

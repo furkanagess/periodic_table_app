@@ -47,8 +47,16 @@ class HomeView extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        elementGroupContainer(context),
-        elementGroupContainer(context),
+        ElementGroupContainer(
+          onTap: () {},
+          color: AppColors().turquoise,
+          title: "AMETAL",
+        ),
+        ElementGroupContainer(
+          onTap: () {},
+          color: AppColors().grey,
+          title: "DİĞER",
+        ),
       ],
     );
   }
@@ -57,17 +65,17 @@ class HomeView extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        elementGroupContainer(context),
-        elementGroupContainer(context),
+        ElementGroupContainer(
+          onTap: () {},
+          color: AppColors().lightOrange,
+          title: "YARI-METAL",
+        ),
+        ElementGroupContainer(
+          onTap: () {},
+          color: AppColors().green,
+          title: "METAL",
+        ),
       ],
-    );
-  }
-
-  Widget elementGroupContainer(BuildContext context) {
-    return ElementGroupContainer(
-      onTap: () {},
-      color: AppColors().purple,
-      title: "AMETAL GRUBU",
     );
   }
 
