@@ -6,5 +6,6 @@ class AppStrings {
   String get nonMetal => "NON-METALS";
   String get others => "OTHERS";
   String get metalloids => "METALLOİDS";
+  String get metalloidsElements => "Metalloids Elements";
   String get nonMetalElements => "Non-metal Elements";
 }

@@ -28,11 +28,10 @@ class HomeView extends StatelessWidget {
             padding: context.paddingNormal,
             children: [
               headerElementText(context),
-              SizedBox(height: context.dynamicHeight(0.01)),
               clickableElementContainer(context),
               SizedBox(height: context.dynamicHeight(0.04)),
               headerGroupText(context),
-              SizedBox(height: context.dynamicHeight(0.01)),
+              SizedBox(height: context.dynamicHeight(0.02)),
               elementGroupRowOne(context),
               SizedBox(height: context.dynamicHeight(0.04)),
               elementGroupRowTwo(context),
@@ -69,8 +68,11 @@ class HomeView extends StatelessWidget {
       children: [
         ElementGroupContainer(
           onTap: () {
-            MaterialPageRoute(
-              builder: (context) => const MetalloidsPageView(),
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MetalloidsPageView(),
+              ),
             );
           },
           color: AppColors().lightOrange,
