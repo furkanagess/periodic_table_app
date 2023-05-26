@@ -25,52 +25,55 @@ class ElementContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        width: context.dynamicWidth(0.7),
-        height: context.dynamicHeight(0.075),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(bottom: context.dynamicHeight(0.04), left: context.dynamicHeight(0.01)),
-              child: Text(
-                atomNumber,
-                style: context.textTheme.titleMedium?.copyWith(
+      child: Padding(
+        padding: context.paddingNormal,
+        child: Container(
+          width: context.dynamicWidth(0.7),
+          height: context.dynamicHeight(0.075),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: context.dynamicHeight(0.04), left: context.dynamicHeight(0.01)),
+                child: Text(
+                  atomNumber,
+                  style: context.textTheme.titleMedium?.copyWith(
+                    color: AppColors().white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Text(
+                atomSymbol,
+                style: context.textTheme.headlineLarge?.copyWith(
+                  color: AppColors().white,
+                ),
+              ),
+              const Spacer(),
+              Text(
+                atomName,
+                style: context.textTheme.headlineSmall?.copyWith(
                   color: AppColors().white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
-            Text(
-              atomSymbol,
-              style: context.textTheme.headlineLarge?.copyWith(
-                color: AppColors().white,
-              ),
-            ),
-            const Spacer(),
-            Text(
-              atomName,
-              style: context.textTheme.headlineSmall?.copyWith(
-                color: AppColors().white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const Spacer(),
-            Padding(
-              padding: EdgeInsets.only(top: context.dynamicHeight(0.04), right: context.dynamicHeight(0.01)),
-              child: Text(
-                atomWeight,
-                style: context.textTheme.bodyMedium?.copyWith(
-                  color: AppColors().white,
-                  fontWeight: FontWeight.bold,
+              const Spacer(),
+              Padding(
+                padding: EdgeInsets.only(top: context.dynamicHeight(0.04), right: context.dynamicHeight(0.01)),
+                child: Text(
+                  atomWeight,
+                  style: context.textTheme.bodyMedium?.copyWith(
+                    color: AppColors().white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

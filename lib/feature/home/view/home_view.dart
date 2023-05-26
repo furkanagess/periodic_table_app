@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:periodic_table_app/feature/home/viewModel/home_view_model.dart';
+import 'package:periodic_table_app/feature/metalloids/view/metalloids_view.dart';
+
 import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
@@ -26,11 +28,11 @@ class HomeView extends StatelessWidget {
             padding: context.paddingNormal,
             children: [
               headerElementText(context),
-              SizedBox(height: context.dynamicHeight(0.02)),
+              SizedBox(height: context.dynamicHeight(0.01)),
               clickableElementContainer(context),
-              SizedBox(height: context.dynamicHeight(0.05)),
+              SizedBox(height: context.dynamicHeight(0.04)),
               headerGroupText(context),
-              SizedBox(height: context.dynamicHeight(0.02)),
+              SizedBox(height: context.dynamicHeight(0.01)),
               elementGroupRowOne(context),
               SizedBox(height: context.dynamicHeight(0.04)),
               elementGroupRowTwo(context),
@@ -50,12 +52,12 @@ class HomeView extends StatelessWidget {
         ElementGroupContainer(
           onTap: () {},
           color: AppColors().turquoise,
-          title: "AMETAL",
+          title: AppStrings().nonMetal,
         ),
         ElementGroupContainer(
           onTap: () {},
           color: AppColors().grey,
-          title: "DİĞER",
+          title: AppStrings().others,
         ),
       ],
     );
@@ -66,14 +68,18 @@ class HomeView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            MaterialPageRoute(
+              builder: (context) => const MetalloidsPageView(),
+            );
+          },
           color: AppColors().lightOrange,
-          title: "YARI-METAL",
+          title: AppStrings().metalloids,
         ),
         ElementGroupContainer(
           onTap: () {},
           color: AppColors().green,
-          title: "METAL",
+          title: AppStrings().metal,
         ),
       ],
     );

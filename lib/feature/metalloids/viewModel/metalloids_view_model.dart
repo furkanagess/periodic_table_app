@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:periodic_table_app/product/base/base_view_model.dart';
-part 'nonmetal_view_model.g.dart';
+part 'metalloids_view_model.g.dart';
 
-class NonMetalViewModel = _NonMetalViewModelBase with _$NonMetalViewModel;
+class MetalloidsViewModel = _MetalloidsViewModelBase with _$MetalloidsViewModel;
 
-abstract class _NonMetalViewModelBase with Store, BaseViewModel {
+abstract class _MetalloidsViewModelBase with Store, BaseViewModel {
   @override
   void setContext(BuildContext context) => viewModelContext = context;
 
