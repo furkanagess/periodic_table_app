@@ -13,6 +13,10 @@ class AppStrings {
   String get lanthanites => "LANTHANIDES";
   String get actinides => "ACTINIDES";
   String get metalGroup => "METAL GROUP";
-  String get metalloidsElements => "Metalloids Elements";
+  String get nobleGas => "NOBLE GASES";
+  String get reactive => "REACTIVE NONMETAL";
+  String get nonMetalGroup => "NON-METAL GROUP";
+  String get other => "OTHER ELEMENTS";
+  String get metalloidsElements => "Metalloid Elements";
   String get nonMetalElements => "Non-metal Elements";
 }

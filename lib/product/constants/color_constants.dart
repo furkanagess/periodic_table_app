@@ -4,7 +4,6 @@ class AppColors {
   Color get transparentWhite => Color.fromARGB(20, 255, 255, 255);
   Color get lightWhite => Color.fromARGB(50, 255, 255, 255);
   Color get darkBlue => Color.fromARGB(255, 34, 34, 49);
-
   Color get white => Colors.white;
   Color get grey => Color(0xff505050);
   Color get background => Color(0xff0e0e14);
