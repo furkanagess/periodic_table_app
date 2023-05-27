@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:periodic_table_app/feature/home/viewModel/home_view_model.dart';
 import 'package:periodic_table_app/feature/metalloids/view/metalloids_view.dart';
+import 'package:periodic_table_app/feature/metals/view/metal_view.dart';
 
 import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
@@ -71,7 +72,7 @@ class HomeView extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MetalloidsPageView(),
+                builder: (context) => const MetalloidsPageView(),
               ),
             );
           },
@@ -79,7 +80,14 @@ class HomeView extends StatelessWidget {
           title: AppStrings().metalloids,
         ),
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const MetalPageView(),
+              ),
+            );
+          },
           color: AppColors().green,
           title: AppStrings().metal,
         ),
