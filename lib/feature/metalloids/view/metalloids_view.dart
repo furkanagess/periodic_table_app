@@ -19,14 +19,49 @@ class MetalloidsPageView extends StatelessWidget {
       },
       onPageBuilder: (context, value) => Scaffold(
         backgroundColor: AppColors().background,
-        appBar: buildAppbar(context),
-        body: SafeArea(
-          child: ListView(
-            padding: context.paddingNormal,
-            children: [
-              headerText(context),
-              elementsListview(),
-            ],
+        body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+            sliverAppbar(context),
+          ],
+          body: SafeArea(
+            child: ListView(
+              padding: context.paddingNormal,
+              children: [
+                headerText(context),
+                elementsListview(),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  SliverAppBar sliverAppbar(BuildContext context) {
+    return SliverAppBar(
+      centerTitle: true,
+      elevation: 0,
+      backgroundColor: AppColors().background,
+      title: Flexible(
+        child: Padding(
+          padding: context.paddingLow,
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: AppStrings().searchElement,
+              hintStyle: context.textTheme.titleMedium?.copyWith(
+                color: AppColors().white,
+              ),
+              prefixIcon: Icon(
+                Icons.search,
+                color: AppColors().white,
+              ),
+              filled: true,
+              fillColor: AppColors().transparentWhite,
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
           ),
         ),
       ),
@@ -40,11 +75,11 @@ class MetalloidsPageView extends StatelessWidget {
       itemCount: 20,
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
-        color: AppColors().turquoise,
-        atomNumber: "2",
-        atomSymbol: "He",
-        atomName: "Helyum",
-        atomWeight: "2.322",
+        color: AppColors().purple,
+        atomNumber: "5",
+        atomSymbol: "B",
+        atomName: "Boron",
+        atomWeight: "10.81",
       ),
     );
   }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:periodic_table_app/feature/home/viewModel/home_view_model.dart';
 import 'package:periodic_table_app/feature/metalloids/view/metalloids_view.dart';
 import 'package:periodic_table_app/feature/metals/view/metal_view.dart';
+import 'package:periodic_table_app/feature/nonMetal/view/non_metal_view.dart';
+import 'package:periodic_table_app/feature/other/view/other_view.dart';
 
 import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
@@ -30,7 +32,7 @@ class HomeView extends StatelessWidget {
             children: [
               headerElementText(context),
               clickableElementContainer(context),
-              SizedBox(height: context.dynamicHeight(0.04)),
+              SizedBox(height: context.dynamicHeight(0.02)),
               headerGroupText(context),
               SizedBox(height: context.dynamicHeight(0.02)),
               elementGroupRowOne(context),
@@ -50,13 +52,27 @@ class HomeView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const NonMetalPageView(),
+              ),
+            );
+          },
           color: AppColors().turquoise,
           title: AppStrings().nonMetal,
         ),
         ElementGroupContainer(
-          onTap: () {},
-          color: AppColors().grey,
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const OtherElementsPageView(),
+              ),
+            );
+          },
+          color: AppColors().darkBlue,
           title: AppStrings().others,
         ),
       ],
@@ -76,7 +92,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
-          color: AppColors().lightOrange,
+          color: AppColors().purple,
           title: AppStrings().metalloids,
         ),
         ElementGroupContainer(
@@ -110,7 +126,7 @@ class HomeView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         languageButtonTR(context),
-        languageButtonUK(),
+        // languageButtonUK(),
         IconButton(
           onPressed: () {},
           icon: Icon(
@@ -123,6 +139,14 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
           icon: Icon(
             Icons.report,
+            color: AppColors().white,
+            size: 30,
+          ),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.star_border,
             color: AppColors().white,
             size: 30,
           ),

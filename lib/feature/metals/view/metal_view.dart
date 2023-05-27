@@ -22,8 +22,8 @@ class MetalPageView extends StatelessWidget {
         appBar: buildAppbar(context),
         body: SafeArea(
           child: ListView(
+            padding: context.paddingNormal,
             children: [
-              SizedBox(height: context.dynamicHeight(0.01)),
               headerText(context),
               SizedBox(height: context.dynamicHeight(0.04)),
               metalGroupOne(),
