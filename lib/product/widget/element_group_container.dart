@@ -31,7 +31,7 @@ class ElementGroupContainer extends StatelessWidget {
           child: Text(
             title,
             style: context.textTheme.bodyMedium?.copyWith(
-              color: AppColors().background,
+              color: AppColors().white,
             ),
           ),
         ),
