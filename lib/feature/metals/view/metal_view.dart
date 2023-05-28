@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/actinides/view/actinides_view.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/alkali/view/alkaline_view.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/alkalineEarth/view/earth_alkaline_view.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/lanthandes/view/lanthanides_view.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/postTransition/view/post_transtion_view.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/transition/view/transition_view.dart';
 
 import 'package:periodic_table_app/feature/metals/viewModel/metal_view_model.dart';
 import 'package:periodic_table_app/product/base/base_view.dart';
@@ -26,11 +32,11 @@ class MetalPageView extends StatelessWidget {
             children: [
               headerText(context),
               SizedBox(height: context.dynamicHeight(0.04)),
-              metalGroupOne(),
+              metalGroupOne(context),
               SizedBox(height: context.dynamicHeight(0.04)),
-              metalGroupTwo(),
+              metalGroupTwo(context),
               SizedBox(height: context.dynamicHeight(0.04)),
-              metalGroupThree(),
+              metalGroupThree(context),
             ],
           ),
         ),
@@ -38,17 +44,31 @@ class MetalPageView extends StatelessWidget {
     );
   }
 
-  Row metalGroupThree() {
+  Row metalGroupThree(context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const LanthanidesPageView(),
+              ),
+            );
+          },
           color: AppColors().brown,
           title: AppStrings().lanthanites,
         ),
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ActinidesPageView(),
+              ),
+            );
+          },
           color: AppColors().orange,
           title: AppStrings().actinides,
         ),
@@ -56,17 +76,31 @@ class MetalPageView extends StatelessWidget {
     );
   }
 
-  Row metalGroupTwo() {
+  Row metalGroupTwo(context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const TransitionPageView(),
+              ),
+            );
+          },
           color: AppColors().grey,
           title: AppStrings().transition,
         ),
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const PostTransitionPageView(),
+              ),
+            );
+          },
           color: AppColors().green,
           title: AppStrings().postTransition,
         ),
@@ -74,17 +108,31 @@ class MetalPageView extends StatelessWidget {
     );
   }
 
-  Row metalGroupOne() {
+  Row metalGroupOne(context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AlkinePageView(),
+              ),
+            );
+          },
           color: AppColors().pink,
           title: AppStrings().alkali,
         ),
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const EarthAlkinePageView(),
+              ),
+            );
+          },
           color: AppColors().lightOrange,
           title: AppStrings().alkaliEarth,
         ),
