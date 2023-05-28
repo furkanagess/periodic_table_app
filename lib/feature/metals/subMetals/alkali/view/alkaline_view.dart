@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:periodic_table_app/feature/metals/lanthandes/viewModel/lanthanides_view_model.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/alkali/viewModel/alkaline_view_model.dart';
 import 'package:periodic_table_app/product/base/base_view.dart';
 
-class LanthanidesPageView extends StatelessWidget {
-  const LanthanidesPageView({super.key});
+class AlkinePageView extends StatelessWidget {
+  const AlkinePageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BaseView<LanthanidesViewModel>(
-      viewModel: LanthanidesViewModel(),
+    return BaseView<AlkalineViewModel>(
+      viewModel: AlkalineViewModel(),
       onModelReady: (model) {
         model.setContext(context);
       },

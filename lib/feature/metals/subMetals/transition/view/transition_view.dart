@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:periodic_table_app/feature/metals/alkalineEarth/viewModel/alkaline_earth_view_model.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/transition/viewModel/transition_view_model.dart';
 import 'package:periodic_table_app/product/base/base_view.dart';
 
-class EarthAlkinePageView extends StatelessWidget {
-  const EarthAlkinePageView({super.key});
+class TransitionPageView extends StatelessWidget {
+  const TransitionPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BaseView<EarthAlkalineViewModel>(
-      viewModel: EarthAlkalineViewModel(),
+    return BaseView<TransitionViewModel>(
+      viewModel: TransitionViewModel(),
       onModelReady: (model) {
         model.setContext(context);
       },

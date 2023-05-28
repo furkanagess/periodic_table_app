@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:periodic_table_app/feature/metals/postTransition/viewModel/post_transition_view_model.dart';
+import 'package:periodic_table_app/feature/metals/subMetals/postTransition/viewModel/post_transition_view_model.dart';
 import 'package:periodic_table_app/product/base/base_view.dart';
 
 class PostTransitionPageView extends StatelessWidget {
