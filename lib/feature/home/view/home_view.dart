@@ -60,6 +60,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
+          shadowColor: AppColors().turquoise,
           color: AppColors().turquoise,
           title: AppStrings().nonMetal,
         ),
@@ -72,6 +73,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
+          shadowColor: AppColors().darkBlue,
           color: AppColors().darkBlue,
           title: AppStrings().others,
         ),
@@ -92,6 +94,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
+          shadowColor: AppColors().lightPurple,
           color: AppColors().purple,
           title: AppStrings().metalloids,
         ),
@@ -104,6 +107,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
+          shadowColor: AppColors().green,
           color: AppColors().green,
           title: AppStrings().metal,
         ),
@@ -182,6 +186,7 @@ class HomeView extends StatelessWidget {
     return ElementContainer(
       onTap: () {},
       color: AppColors().pink,
+      shadowColor: AppColors().pink,
       atomNumber: "2",
       atomSymbol: "He",
       atomName: "Helyum",

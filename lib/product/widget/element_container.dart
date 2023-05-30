@@ -7,6 +7,7 @@ import 'package:periodic_table_app/product/extensions/context_extension.dart';
 class ElementContainer extends StatelessWidget {
   Function() onTap;
   Color color;
+  Color shadowColor;
   String atomNumber;
   String atomSymbol;
   String atomName;
@@ -15,6 +16,7 @@ class ElementContainer extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.color,
+    required this.shadowColor,
     required this.atomNumber,
     required this.atomSymbol,
     required this.atomName,
@@ -31,6 +33,16 @@ class ElementContainer extends StatelessWidget {
           width: context.dynamicWidth(0.7),
           height: context.dynamicHeight(0.075),
           decoration: BoxDecoration(
+            border: Border.all(
+              width: 1.0,
+            ),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 1.0,
+                color: shadowColor,
+                offset: const Offset(4, 8),
+              ),
+            ],
             color: color,
             borderRadius: BorderRadius.circular(10.0),
           ),

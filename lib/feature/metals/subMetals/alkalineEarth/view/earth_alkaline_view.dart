@@ -75,6 +75,7 @@ class EarthAlkinePageView extends StatelessWidget {
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
         color: AppColors().lightOrange,
+        shadowColor: AppColors().lightOrange,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",

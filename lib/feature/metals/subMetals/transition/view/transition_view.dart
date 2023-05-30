@@ -75,6 +75,7 @@ class TransitionPageView extends StatelessWidget {
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
         color: AppColors().grey,
+        shadowColor: AppColors().grey,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",

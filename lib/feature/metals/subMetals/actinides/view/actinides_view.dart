@@ -75,6 +75,7 @@ class ActinidesPageView extends StatelessWidget {
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
         color: AppColors().orange,
+        shadowColor: AppColors().orange,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",
