@@ -57,7 +57,7 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightOrange,
+          shadowColor: AppColors().darkBrown,
           color: AppColors().brown,
           title: AppStrings().lanthanites,
         ),
@@ -70,7 +70,7 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightOrange,
+          shadowColor: AppColors().darkOrange,
           color: AppColors().orange,
           title: AppStrings().actinides,
         ),
@@ -91,7 +91,7 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightOrange,
+          shadowColor: AppColors().darkGrey,
           color: AppColors().grey,
           title: AppStrings().transition,
         ),
@@ -104,7 +104,7 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightOrange,
+          shadowColor: AppColors().darkGreen,
           color: AppColors().green,
           title: AppStrings().postTransition,
         ),
@@ -125,7 +125,7 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightOrange,
+          shadowColor: AppColors().darkPink,
           color: AppColors().pink,
           title: AppStrings().alkali,
         ),
@@ -138,7 +138,7 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightOrange,
+          shadowColor: AppColors().dLightOrange,
           color: AppColors().lightOrange,
           title: AppStrings().alkaliEarth,
         ),

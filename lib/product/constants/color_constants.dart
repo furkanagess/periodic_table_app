@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors {
   Color get transparentWhite => Color.fromARGB(20, 255, 255, 255);
   Color get lightWhite => Color.fromARGB(50, 255, 255, 255);
-  Color get darkBlue => Color.fromARGB(255, 34, 34, 49);
+  Color get blue => Color.fromARGB(255, 34, 34, 49);
   Color get white => Colors.white;
   Color get grey => Color.fromARGB(255, 80, 80, 80);
   Color get background => Color.fromARGB(255, 14, 14, 20);
@@ -16,6 +16,15 @@ class AppColors {
   Color get pink => Color.fromARGB(255, 234, 72, 158);
   Color get purple => Color.fromARGB(255, 110, 75, 245);
 
-  // Light Colors
-  Color get lightPurple => Color.fromARGB(255, 109, 75, 245);
+  // Dark Colors
+  Color get darkPurple => Color.fromARGB(255, 66, 44, 153);
+  Color get darkGreen => Color.fromARGB(255, 45, 68, 35);
+  Color get darkTurquoise => Color.fromARGB(255, 17, 81, 90);
+  Color get darkBlue => Color.fromARGB(255, 19, 19, 44);
+  Color get darkPink => Color.fromARGB(255, 153, 9, 86);
+  Color get darkOrange => Color.fromARGB(255, 143, 52, 0);
+  Color get darkBrown => Color.fromARGB(255, 39, 28, 19);
+  Color get darkGrey => Color.fromARGB(255, 46, 46, 46);
+  Color get dLightOrange => Color.fromARGB(255, 184, 86, 71);
+  Color get darkRed => Color.fromARGB(255, 65, 11, 18);
 }

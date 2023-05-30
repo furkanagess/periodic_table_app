@@ -75,7 +75,7 @@ class AlkinePageView extends StatelessWidget {
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
         color: AppColors().pink,
-        shadowColor: AppColors().pink,
+        shadowColor: AppColors().darkPink,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",

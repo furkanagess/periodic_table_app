@@ -8,6 +8,7 @@ class ElementGroupContainer extends StatelessWidget {
   Function() onTap;
   Color color;
   Color shadowColor;
+
   String title;
 
   ElementGroupContainer({
@@ -26,17 +27,12 @@ class ElementGroupContainer extends StatelessWidget {
         height: context.dynamicHeight(0.22),
         width: context.dynamicWidth(0.38),
         decoration: BoxDecoration(
-          border: Border.all(
-            width: 1.5,
-            style: BorderStyle.solid,
-            color: AppColors().background,
-          ),
+          border: Border.all(width: 0.5),
           boxShadow: [
             BoxShadow(
               color: shadowColor,
-              offset: const Offset(0, 10),
-              blurRadius: 5,
-              spreadRadius: -5,
+              offset: const Offset(4, 4),
+              spreadRadius: 1,
             ),
           ],
           borderRadius: BorderRadius.circular(10.0),

@@ -33,14 +33,11 @@ class ElementContainer extends StatelessWidget {
           width: context.dynamicWidth(0.7),
           height: context.dynamicHeight(0.075),
           decoration: BoxDecoration(
-            border: Border.all(
-              width: 1.0,
-            ),
             boxShadow: [
               BoxShadow(
-                blurRadius: 1.0,
                 color: shadowColor,
-                offset: const Offset(4, 8),
+                offset: const Offset(5, 5),
+                spreadRadius: 1,
               ),
             ],
             color: color,

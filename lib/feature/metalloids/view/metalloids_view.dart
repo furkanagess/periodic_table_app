@@ -76,7 +76,7 @@ class MetalloidsPageView extends StatelessWidget {
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
         color: AppColors().purple,
-        shadowColor: AppColors().purple,
+        shadowColor: AppColors().darkPurple,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",

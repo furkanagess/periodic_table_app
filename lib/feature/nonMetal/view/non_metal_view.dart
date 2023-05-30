@@ -38,14 +38,14 @@ class NonMetalPageView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          shadowColor: AppColors().lightOrange,
           onTap: () {},
+          shadowColor: AppColors().darkRed,
           color: AppColors().red,
           title: AppStrings().nobleGas,
         ),
         ElementGroupContainer(
-          shadowColor: AppColors().lightOrange,
           onTap: () {},
+          shadowColor: AppColors().darkPurple,
           color: AppColors().purple,
           title: AppStrings().reactive,
         ),

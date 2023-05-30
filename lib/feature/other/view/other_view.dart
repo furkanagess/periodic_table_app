@@ -74,7 +74,7 @@ class OtherElementsPageView extends StatelessWidget {
       itemCount: 20,
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
-        color: AppColors().darkBlue,
+        color: AppColors().blue,
         shadowColor: AppColors().darkBlue,
         atomNumber: "109",
         atomSymbol: "Mt",

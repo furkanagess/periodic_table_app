@@ -60,7 +60,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().turquoise,
+          shadowColor: AppColors().darkTurquoise,
           color: AppColors().turquoise,
           title: AppStrings().nonMetal,
         ),
@@ -74,7 +74,7 @@ class HomeView extends StatelessWidget {
             );
           },
           shadowColor: AppColors().darkBlue,
-          color: AppColors().darkBlue,
+          color: AppColors().blue,
           title: AppStrings().others,
         ),
       ],
@@ -94,7 +94,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().lightPurple,
+          shadowColor: AppColors().darkPurple,
           color: AppColors().purple,
           title: AppStrings().metalloids,
         ),
@@ -107,7 +107,7 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().green,
+          shadowColor: AppColors().darkGreen,
           color: AppColors().green,
           title: AppStrings().metal,
         ),
@@ -186,7 +186,7 @@ class HomeView extends StatelessWidget {
     return ElementContainer(
       onTap: () {},
       color: AppColors().pink,
-      shadowColor: AppColors().pink,
+      shadowColor: AppColors().darkPink,
       atomNumber: "2",
       atomSymbol: "He",
       atomName: "Helyum",

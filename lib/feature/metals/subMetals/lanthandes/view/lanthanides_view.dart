@@ -75,7 +75,7 @@ class LanthanidesPageView extends StatelessWidget {
       itemBuilder: (context, index) => ElementContainer(
         onTap: () {},
         color: AppColors().brown,
-        shadowColor: AppColors().brown,
+        shadowColor: AppColors().darkBrown,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",
