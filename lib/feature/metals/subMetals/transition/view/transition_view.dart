@@ -87,7 +87,7 @@ class TransitionPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().metalloidsElements,
+        AppStrings().transition,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),

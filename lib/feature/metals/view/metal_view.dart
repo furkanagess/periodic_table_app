@@ -59,7 +59,7 @@ class MetalPageView extends StatelessWidget {
           },
           shadowColor: AppColors().darkBrown,
           color: AppColors().brown,
-          title: AppStrings().lanthanites,
+          title: AppStrings().lanthanides,
         ),
         ElementGroupContainer(
           onTap: () {

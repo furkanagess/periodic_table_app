@@ -87,7 +87,7 @@ class OtherElementsPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().other,
+        AppStrings().others,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),

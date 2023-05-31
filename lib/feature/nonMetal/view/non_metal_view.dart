@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table_app/feature/nonMetal/subNonMetals/nobleGas/view/noble_gas_view.dart';
+import 'package:periodic_table_app/feature/nonMetal/subNonMetals/reactive/view/reactive_nonmetal_view.dart';
 import 'package:periodic_table_app/feature/nonMetal/viewModel/non_metal_view_model.dart';
 import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
@@ -25,7 +27,7 @@ class NonMetalPageView extends StatelessWidget {
             children: [
               headerText(context),
               SizedBox(height: context.dynamicHeight(0.04)),
-              nonMetalGroup(),
+              nonMetalGroup(context),
             ],
           ),
         ),
@@ -33,18 +35,32 @@ class NonMetalPageView extends StatelessWidget {
     );
   }
 
-  Row nonMetalGroup() {
+  Row nonMetalGroup(context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => NobleGasPageView(),
+              ),
+            );
+          },
           shadowColor: AppColors().darkRed,
           color: AppColors().red,
           title: AppStrings().nobleGas,
         ),
         ElementGroupContainer(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ReactiveNonmetalPageView(),
+              ),
+            );
+          },
           shadowColor: AppColors().darkPurple,
           color: AppColors().purple,
           title: AppStrings().reactive,
@@ -56,7 +72,7 @@ class NonMetalPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().metalGroup,
+        AppStrings().nonMetalGroup,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),

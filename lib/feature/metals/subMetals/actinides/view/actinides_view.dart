@@ -87,7 +87,7 @@ class ActinidesPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().metalloidsElements,
+        AppStrings().actinides,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),

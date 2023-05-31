@@ -87,7 +87,7 @@ class LanthanidesPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().metalloidsElements,
+        AppStrings().lanthanides,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),

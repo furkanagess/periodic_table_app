@@ -88,7 +88,7 @@ class MetalloidsPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().metalloidsElements,
+        AppStrings().metalloids,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),
