@@ -4,7 +4,7 @@ import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
-import 'package:periodic_table_app/product/widget/element_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_container.dart';
 
 class NobleGasPageView extends StatelessWidget {
   const NobleGasPageView({super.key});

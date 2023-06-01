@@ -11,7 +11,7 @@ import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
-import 'package:periodic_table_app/product/widget/element_group_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
 
 class MetalPageView extends StatelessWidget {
   const MetalPageView({super.key});

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table_app/feature/detail/view/detail_view.dart';
 import 'package:periodic_table_app/feature/metals/subMetals/lanthandes/viewModel/lanthanides_view_model.dart';
 import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
-import 'package:periodic_table_app/product/widget/element_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_container.dart';
 
 class LanthanidesPageView extends StatelessWidget {
   const LanthanidesPageView({super.key});
@@ -73,7 +74,14 @@ class LanthanidesPageView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: 20,
       itemBuilder: (context, index) => ElementContainer(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const DetailPageView(),
+            ),
+          );
+        },
         color: AppColors().brown,
         shadowColor: AppColors().darkBrown,
         atomNumber: "5",

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table_app/feature/detail/view/detail_view.dart';
 import 'package:periodic_table_app/feature/metalloids/viewModel/metalloids_view_model.dart';
 
 import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
-import 'package:periodic_table_app/product/widget/element_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_container.dart';
 
 class MetalloidsPageView extends StatelessWidget {
   const MetalloidsPageView({super.key});
@@ -74,7 +75,14 @@ class MetalloidsPageView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: 20,
       itemBuilder: (context, index) => ElementContainer(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const DetailPageView(),
+            ),
+          );
+        },
         color: AppColors().purple,
         shadowColor: AppColors().darkPurple,
         atomNumber: "5",

@@ -6,7 +6,7 @@ import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
-import 'package:periodic_table_app/product/widget/element_group_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
 
 class NonMetalPageView extends StatelessWidget {
   const NonMetalPageView({super.key});
@@ -44,7 +44,7 @@ class NonMetalPageView extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => NobleGasPageView(),
+                builder: (context) => const NobleGasPageView(),
               ),
             );
           },
@@ -57,7 +57,7 @@ class NonMetalPageView extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ReactiveNonmetalPageView(),
+                builder: (context) => const ReactiveNonmetalPageView(),
               ),
             );
           },

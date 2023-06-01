@@ -8,7 +8,6 @@ class ElementGroupContainer extends StatelessWidget {
   Function() onTap;
   Color color;
   Color shadowColor;
-
   String title;
 
   ElementGroupContainer({

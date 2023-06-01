@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:periodic_table_app/feature/detail/view/detail_view.dart';
 import 'package:periodic_table_app/feature/home/viewModel/home_view_model.dart';
 import 'package:periodic_table_app/feature/metalloids/view/metalloids_view.dart';
 import 'package:periodic_table_app/feature/metals/view/metal_view.dart';
@@ -9,8 +10,8 @@ import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
-import 'package:periodic_table_app/product/widget/element_container.dart';
-import 'package:periodic_table_app/product/widget/element_group_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_container.dart';
+import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
 import 'package:periodic_table_app/product/widget/language_button.dart';
 
 class HomeView extends StatelessWidget {
@@ -184,7 +185,14 @@ class HomeView extends StatelessWidget {
 
   Widget clickableElementContainer(BuildContext context) {
     return ElementContainer(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const DetailPageView(),
+          ),
+        );
+      },
       color: AppColors().pink,
       shadowColor: AppColors().darkPink,
       atomNumber: "2",
