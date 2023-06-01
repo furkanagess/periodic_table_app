@@ -12,7 +12,7 @@ import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
 import 'package:periodic_table_app/product/widget/container/element_container.dart';
 import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
-import 'package:periodic_table_app/product/widget/language_button.dart';
+import 'package:periodic_table_app/product/widget/button/language_button.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
