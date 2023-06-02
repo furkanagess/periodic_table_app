@@ -133,7 +133,92 @@ class HomeView extends StatelessWidget {
         languageButtonTR(context),
         // languageButtonUK(),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                elevation: 3,
+                backgroundColor: AppColors().darkBlue,
+                title: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: SizedBox(
+                            width: 30,
+                            height: 30,
+                            child: Icon(
+                              Icons.close,
+                              color: AppColors().white,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    // SizedBox(
+                    //   width: context.dynamicWidth(0.7),
+                    //   height: context.dynamicHeight(0.2),
+                    //   child: Image.asset("assets/img/fio_logo.png"),
+                    // ),
+                    SizedBox(
+                      height: context.dynamicHeight(0.05),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "aaaa",
+                          style: context.textTheme.bodyLarge?.copyWith(color: AppColors().white, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "aaaaa",
+                          style: context.textTheme.bodyLarge?.copyWith(color: AppColors().white, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: context.dynamicHeight(0.03),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "ssss",
+                          style: context.textTheme.bodyMedium?.copyWith(
+                            color: AppColors().white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: context.dynamicHeight(0.03),
+                    ),
+
+                    SizedBox(
+                      height: context.dynamicHeight(0.01),
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "dfd",
+                            style: context.textTheme.bodySmall?.copyWith(
+                              color: AppColors().white,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
           icon: Icon(
             Icons.help,
             color: AppColors().white,
