@@ -91,8 +91,8 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().darkGrey,
-          color: AppColors().grey,
+          shadowColor: AppColors().dLightOrange,
+          color: AppColors().lightOrange,
           title: AppStrings().transition,
         ),
         ElementGroupContainer(
@@ -104,8 +104,8 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().darkGreen,
-          color: AppColors().green,
+          shadowColor: AppColors().darkTurquoise,
+          color: AppColors().turquoise,
           title: AppStrings().postTransition,
         ),
       ],
@@ -125,8 +125,8 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().darkPink,
-          color: AppColors().pink,
+          shadowColor: AppColors().darkOrange,
+          color: AppColors().orange,
           title: AppStrings().alkali,
         ),
         ElementGroupContainer(
@@ -138,8 +138,8 @@ class MetalPageView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().dLightOrange,
-          color: AppColors().lightOrange,
+          shadowColor: AppColors().darkGreen,
+          color: AppColors().green,
           title: AppStrings().alkaliEarth,
         ),
       ],

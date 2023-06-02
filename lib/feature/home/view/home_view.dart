@@ -61,8 +61,8 @@ class HomeView extends StatelessWidget {
               ),
             );
           },
-          shadowColor: AppColors().darkTurquoise,
-          color: AppColors().turquoise,
+          shadowColor: AppColors().darkPink,
+          color: AppColors().pink,
           title: AppStrings().nonMetal,
         ),
         ElementGroupContainer(
@@ -157,6 +157,7 @@ class HomeView extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(height: context.dynamicHeight(0.01)),
                     Row(
                       children: [
                         Icon(
@@ -173,6 +174,7 @@ class HomeView extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(height: context.dynamicHeight(0.01)),
                     Row(
                       children: [
                         Icon(
@@ -189,6 +191,7 @@ class HomeView extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(height: context.dynamicHeight(0.01)),
                     Row(
                       children: [
                         Icon(
