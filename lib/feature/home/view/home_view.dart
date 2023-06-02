@@ -142,53 +142,65 @@ class HomeView extends StatelessWidget {
                 title: Column(
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: SizedBox(
-                            width: 30,
-                            height: 30,
-                            child: Icon(
-                              Icons.close,
-                              color: AppColors().white,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    // SizedBox(
-                    //   width: context.dynamicWidth(0.7),
-                    //   height: context.dynamicHeight(0.2),
-                    //   child: Image.asset("assets/img/fio_logo.png"),
-                    // ),
-                    SizedBox(
-                      height: context.dynamicHeight(0.05),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "aaaa",
-                          style: context.textTheme.bodyLarge?.copyWith(color: AppColors().white, fontWeight: FontWeight.bold),
+                        Icon(
+                          Icons.science,
+                          size: 30,
+                          color: AppColors().purple,
                         ),
                         Text(
-                          "aaaaa",
-                          style: context.textTheme.bodyLarge?.copyWith(color: AppColors().white, fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: context.dynamicHeight(0.03),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "ssss",
-                          style: context.textTheme.bodyMedium?.copyWith(
+                          "İstediğin elementi ara...",
+                          style: context.textTheme.bodyLarge?.copyWith(
                             color: AppColors().white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.science,
+                          size: 30,
+                          color: AppColors().pink,
+                        ),
+                        Text(
+                          "Periyodik Tablo'dan konumunu bul...",
+                          style: context.textTheme.bodyLarge?.copyWith(
+                            color: AppColors().white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.science,
+                          size: 30,
+                          color: AppColors().orange,
+                        ),
+                        Text(
+                          "Element'e tıkla ve bilgiye eriş...",
+                          style: context.textTheme.bodyLarge?.copyWith(
+                            color: AppColors().white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.science,
+                          size: 30,
+                          color: AppColors().yellow,
+                        ),
+                        Text(
+                          "Element'e tıkla ve bilgiye eriş...",
+                          style: context.textTheme.bodyLarge?.copyWith(
+                            color: AppColors().white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -196,23 +208,31 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       height: context.dynamicHeight(0.03),
                     ),
-
-                    SizedBox(
-                      height: context.dynamicHeight(0.01),
-                    ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            "dfd",
-                            style: context.textTheme.bodySmall?.copyWith(
-                              color: AppColors().white,
-                              fontWeight: FontWeight.w300,
-                            ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        width: context.dynamicWidth(0.7),
+                        height: context.dynamicHeight(0.06),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          gradient: LinearGradient(
+                            colors: [
+                              AppColors().purple,
+                              AppColors().pink,
+                              AppColors().orange,
+                              AppColors().yellow,
+                            ],
                           ),
                         ),
-                      ],
+                        child: Center(
+                          child: Text(
+                            "Devam et",
+                            style: context.textTheme.bodyLarge?.copyWith(color: Colors.white),
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
