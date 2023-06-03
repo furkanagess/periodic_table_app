@@ -13,6 +13,7 @@ import 'package:periodic_table_app/product/extensions/context_extension.dart';
 import 'package:periodic_table_app/product/widget/container/element_container.dart';
 import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
 import 'package:periodic_table_app/product/widget/button/language_button.dart';
+import 'package:periodic_table_app/product/widget/text/text_icon_row.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -134,113 +135,7 @@ class HomeView extends StatelessWidget {
         // languageButtonUK(),
         IconButton(
           onPressed: () {
-            showDialog(
-              context: context,
-              builder: (context) => AlertDialog(
-                elevation: 3,
-                backgroundColor: AppColors().darkBlue,
-                title: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.science,
-                          size: 30,
-                          color: AppColors().purple,
-                        ),
-                        Text(
-                          "İstediğin elementi ara...",
-                          style: context.textTheme.bodyLarge?.copyWith(
-                            color: AppColors().white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: context.dynamicHeight(0.01)),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.science,
-                          size: 30,
-                          color: AppColors().pink,
-                        ),
-                        Text(
-                          "Periyodik Tablo'dan konumunu bul...",
-                          style: context.textTheme.bodyLarge?.copyWith(
-                            color: AppColors().white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: context.dynamicHeight(0.01)),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.science,
-                          size: 30,
-                          color: AppColors().orange,
-                        ),
-                        Text(
-                          "Element'e tıkla ve bilgiye eriş...",
-                          style: context.textTheme.bodyLarge?.copyWith(
-                            color: AppColors().white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: context.dynamicHeight(0.01)),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.science,
-                          size: 30,
-                          color: AppColors().yellow,
-                        ),
-                        Text(
-                          "Element'e tıkla ve bilgiye eriş...",
-                          style: context.textTheme.bodyLarge?.copyWith(
-                            color: AppColors().white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: context.dynamicHeight(0.03),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        width: context.dynamicWidth(0.7),
-                        height: context.dynamicHeight(0.06),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
-                            colors: [
-                              AppColors().purple,
-                              AppColors().pink,
-                              AppColors().orange,
-                              AppColors().yellow,
-                            ],
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Devam et",
-                            style: context.textTheme.bodyLarge?.copyWith(color: Colors.white),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
+            helpPopUp(context);
           },
           icon: Icon(
             Icons.help,
@@ -265,6 +160,76 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  Future<dynamic> helpPopUp(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        elevation: 3,
+        backgroundColor: AppColors().darkBlue,
+        title: Column(
+          children: [
+            SizedBox(
+              width: context.dynamicWidth(0.7),
+              height: context.dynamicHeight(0.2),
+              child: Image.asset("assets/img/fio_logo.png"),
+            ),
+            SizedBox(height: context.dynamicHeight(0.05)),
+            TextIconRow(
+              title: "İstediğin elementi ara...",
+              color: AppColors().purple,
+              icon: Icons.science,
+            ),
+            SizedBox(height: context.dynamicHeight(0.01)),
+            TextIconRow(
+              title: "Periyodik Tablo'dan konumunu bul...",
+              color: AppColors().pink,
+              icon: Icons.science,
+            ),
+            SizedBox(height: context.dynamicHeight(0.01)),
+            TextIconRow(
+              title: "Element'e tıkla ve bilgiye eriş...",
+              color: AppColors().orange,
+              icon: Icons.science,
+            ),
+            SizedBox(height: context.dynamicHeight(0.01)),
+            TextIconRow(
+              title: "Element'e tıkla ve bilgiye eriş...",
+              color: AppColors().orange,
+              icon: Icons.science,
+            ),
+            SizedBox(height: context.dynamicHeight(0.03)),
+            InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                width: context.dynamicWidth(0.7),
+                height: context.dynamicHeight(0.06),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(
+                    colors: [
+                      AppColors().purple,
+                      AppColors().pink,
+                      AppColors().orange,
+                      AppColors().yellow,
+                    ],
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    "Devam et",
+                    style: context.textTheme.bodyLarge?.copyWith(color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
