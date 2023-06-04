@@ -10,10 +10,12 @@ import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
+import 'package:periodic_table_app/product/widget/button/gradient_button.dart';
 import 'package:periodic_table_app/product/widget/container/element_container.dart';
 import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
 import 'package:periodic_table_app/product/widget/button/language_button.dart';
 import 'package:periodic_table_app/product/widget/text/text_icon_row.dart';
+import 'package:periodic_table_app/product/widget/textField/long_feedback_tf.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -144,7 +146,9 @@ class HomeView extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            buildBottomSheet(context);
+          },
           icon: Icon(
             Icons.report,
             color: AppColors().white,
@@ -163,6 +167,30 @@ class HomeView extends StatelessWidget {
     );
   }
 
+  Future<dynamic> buildBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
+      backgroundColor: AppColors().popup,
+      context: context,
+      builder: (context) => Column(
+        children: [
+          SizedBox(height: context.dynamicHeight(0.05)),
+          FeedbackLongTextField(title: "Please give us a feedback for develop the App"),
+          SizedBox(height: context.dynamicHeight(0.05)),
+          GradientButton(
+            title: "Send your feedback",
+            onTap: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<dynamic> helpPopUp(BuildContext context) {
     return showDialog(
       context: context,
@@ -178,54 +206,32 @@ class HomeView extends StatelessWidget {
             ),
             SizedBox(height: context.dynamicHeight(0.05)),
             TextIconRow(
-              title: "İstediğin elementi ara...",
+              title: AppStrings().search,
               color: AppColors().purple,
               icon: Icons.science,
             ),
             SizedBox(height: context.dynamicHeight(0.01)),
             TextIconRow(
-              title: "Periyodik Tablo'dan konumunu bul...",
+              title: AppStrings().periodicTable,
               color: AppColors().pink,
               icon: Icons.science,
             ),
             SizedBox(height: context.dynamicHeight(0.01)),
             TextIconRow(
-              title: "Element'e tıkla ve bilgiye eriş...",
+              title: AppStrings().clickElement,
               color: AppColors().orange,
               icon: Icons.science,
             ),
             SizedBox(height: context.dynamicHeight(0.01)),
             TextIconRow(
-              title: "Element'e tıkla ve bilgiye eriş...",
-              color: AppColors().orange,
+              title: AppStrings().clickElement,
+              color: AppColors().yellow,
               icon: Icons.science,
             ),
             SizedBox(height: context.dynamicHeight(0.03)),
-            InkWell(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Container(
-                width: context.dynamicWidth(0.7),
-                height: context.dynamicHeight(0.06),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                    colors: [
-                      AppColors().purple,
-                      AppColors().pink,
-                      AppColors().orange,
-                      AppColors().yellow,
-                    ],
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    "Devam et",
-                    style: context.textTheme.bodyLarge?.copyWith(color: Colors.white),
-                  ),
-                ),
-              ),
+            GradientButton(
+              title: AppStrings().continueText,
+              onTap: () => Navigator.pop(context),
             ),
           ],
         ),
