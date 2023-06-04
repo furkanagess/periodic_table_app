@@ -17,6 +17,12 @@ class AppStrings {
   String get reactive => "REACTIVE NONMETAL";
   String get nonMetalGroup => "NON-METAL GROUP";
 
+  String get search => "İstediğin elementi ara...";
+  String get periodicTable => "Periyodik Tablo'dan konumunu bul...";
+  String get clickElement => "Element'e tıkla ve bilgiye eriş...";
+
+  String get continueText => "Continue";
+
   // elements
   // String get metalloidsElements => "Metalloid Elements";
   // String get nonMetalElements => "Non-metal Elements";
