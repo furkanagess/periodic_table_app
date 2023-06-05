@@ -23,34 +23,7 @@ class DetailPageView extends StatelessWidget {
         backgroundColor: AppColors().background,
         body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
-            SliverAppBar(
-              centerTitle: true,
-              elevation: 0,
-              backgroundColor: AppColors().background,
-              title: Flexible(
-                child: Padding(
-                  padding: context.paddingLow,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: AppStrings().searchElement,
-                      hintStyle: context.textTheme.titleMedium?.copyWith(
-                        color: AppColors().white,
-                      ),
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: AppColors().white,
-                      ),
-                      filled: true,
-                      fillColor: AppColors().transparentWhite,
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            buildSliverAppbar(context),
           ],
           body: SingleChildScrollView(
             child: Padding(
@@ -85,7 +58,7 @@ class DetailPageView extends StatelessWidget {
                       color: AppColors().darkBlue,
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Column(
                         children: [
                           Row(
@@ -111,6 +84,37 @@ class DetailPageView extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  SliverAppBar buildSliverAppbar(BuildContext context) {
+    return SliverAppBar(
+      centerTitle: true,
+      elevation: 0,
+      backgroundColor: AppColors().background,
+      title: Flexible(
+        child: Padding(
+          padding: context.paddingLow,
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: AppStrings().searchElement,
+              hintStyle: context.textTheme.titleMedium?.copyWith(
+                color: AppColors().lightWhite,
+              ),
+              prefixIcon: Icon(
+                Icons.search,
+                color: AppColors().lightWhite,
+              ),
+              filled: true,
+              fillColor: AppColors().transparentWhite,
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(10),
               ),
             ),
           ),

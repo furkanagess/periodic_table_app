@@ -108,11 +108,11 @@ class ReactiveNonmetalPageView extends StatelessWidget {
             decoration: InputDecoration(
               hintText: AppStrings().searchElement,
               hintStyle: context.textTheme.titleMedium?.copyWith(
-                color: AppColors().white,
+                color: AppColors().lightWhite,
               ),
               prefixIcon: Icon(
                 Icons.search,
-                color: AppColors().white,
+                color: AppColors().lightWhite,
               ),
               filled: true,
               fillColor: AppColors().transparentWhite,
