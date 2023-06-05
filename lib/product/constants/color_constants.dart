@@ -21,7 +21,8 @@ class AppColors {
   Color get green => Color.fromARGB(255, 93, 140, 71);
   Color get pink => Color.fromARGB(255, 234, 72, 158);
   Color get purple => Color.fromARGB(255, 110, 75, 245);
-  Color get yellow => Color(0xfffdd776);
+  Color get yellow => Color.fromARGB(255, 197, 168, 93);
+  Color get navyBlue => Color.fromARGB(255, 3, 61, 109);
 
   // Dark Colors
   Color get darkPurple => Color.fromARGB(255, 66, 44, 153);
@@ -34,5 +35,6 @@ class AppColors {
   Color get darkGrey => Color.fromARGB(255, 46, 46, 46);
   Color get dLightOrange => Color.fromARGB(255, 184, 86, 71);
   Color get darkRed => Color.fromARGB(255, 65, 11, 18);
-  Color get darkYellow => Color.fromARGB(255, 155, 131, 73);
+  Color get darkYellow => Color.fromARGB(255, 114, 96, 54);
+  Color get darkNavyBlue => Color.fromARGB(255, 1, 31, 56);
 }
