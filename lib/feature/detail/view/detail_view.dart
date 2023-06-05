@@ -35,8 +35,8 @@ class DetailPageView extends StatelessWidget {
                     children: [
                       ElementSymbolContainer(
                         title: "He",
-                        color: AppColors().purple,
-                        shadowColor: AppColors().darkPurple,
+                        color: AppColors().red,
+                        shadowColor: AppColors().darkRed,
                       ),
                       SizedBox(width: context.dynamicWidth(0.05)),
                       Column(
