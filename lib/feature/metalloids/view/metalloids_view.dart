@@ -83,8 +83,8 @@ class MetalloidsPageView extends StatelessWidget {
             ),
           );
         },
-        color: AppColors().purple,
-        shadowColor: AppColors().darkPurple,
+        color: AppColors().turquoise,
+        shadowColor: AppColors().darkTurquoise,
         atomNumber: "5",
         atomSymbol: "B",
         atomName: "Boron",

@@ -88,7 +88,7 @@ class ReactiveNonmetalPageView extends StatelessWidget {
   Center headerText(BuildContext context) {
     return Center(
       child: Text(
-        AppStrings().nobleGas,
+        AppStrings().reactive,
         style: context.textTheme.headlineLarge?.copyWith(
           color: AppColors().white,
         ),
