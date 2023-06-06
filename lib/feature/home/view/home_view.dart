@@ -202,7 +202,7 @@ class HomeView extends StatelessWidget {
             SizedBox(
               width: context.dynamicWidth(0.7),
               height: context.dynamicHeight(0.2),
-              child: Image.asset("assets/img/fio_logo.png"),
+              child: Image.asset("assets/img/logo.png"),
             ),
             SizedBox(height: context.dynamicHeight(0.05)),
             TextIconRow(
@@ -224,7 +224,7 @@ class HomeView extends StatelessWidget {
             ),
             SizedBox(height: context.dynamicHeight(0.01)),
             TextIconRow(
-              title: AppStrings().clickElement,
+              title: AppStrings().learn,
               color: AppColors().yellow,
               icon: Icons.science,
             ),
