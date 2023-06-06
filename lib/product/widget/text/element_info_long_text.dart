@@ -27,7 +27,7 @@ class ElementInfoParagraph extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: 8, left: 16, right: 16),
           child: Text(
-            paragraph * 30,
+            paragraph,
             style: context.textTheme.bodySmall?.copyWith(
               color: AppColors().white,
             ),

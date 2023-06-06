@@ -52,7 +52,7 @@ class DetailPageView extends StatelessWidget {
                   ),
                   SizedBox(height: context.dynamicHeight(0.07)),
                   Container(
-                    height: 470,
+                    height: context.dynamicHeight(0.7),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: AppColors().darkBlue,
@@ -72,12 +72,17 @@ class DetailPageView extends StatelessWidget {
                           SizedBox(height: context.dynamicHeight(0.05)),
                           ElementInfoParagraph(
                             title: "Tanım",
-                            paragraph: "adadadssdas",
+                            paragraph: AppStrings().description,
                           ),
                           SizedBox(height: context.dynamicHeight(0.05)),
                           ElementInfoParagraph(
                             title: "Kullanım Alanları",
-                            paragraph: "adadadssdas",
+                            paragraph: AppStrings().usage,
+                          ),
+                          SizedBox(height: context.dynamicHeight(0.05)),
+                          ElementInfoParagraph(
+                            title: "Kaynak",
+                            paragraph: AppStrings().source,
                           ),
                         ],
                       ),

@@ -23,7 +23,7 @@ class FeedbackLongTextField extends StatelessWidget {
         maxLines: 6,
         maxLength: 300,
         decoration: InputDecoration(
-          hintStyle: context.textTheme.bodyMedium?.copyWith(color: AppColors().white),
+          hintStyle: context.textTheme.bodyMedium?.copyWith(color: AppColors().lightWhite),
           hintText: title,
           hoverColor: AppColors().white,
           focusColor: AppColors().white,

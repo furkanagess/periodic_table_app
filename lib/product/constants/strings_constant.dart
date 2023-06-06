@@ -20,7 +20,13 @@ class AppStrings {
   String get search => "İstediğin elementi ara...";
   String get periodicTable => "Periyodik Tablo'dan konumunu bul...";
   String get clickElement => "Element'e tıkla ve bilgiye eriş...";
+  String get learn => "Eğlenerek öğrenin...";
+  String get description =>
+      "Renksiz, kokusuz, gaz halde bulunan bir ametal elementtir. Periyodik tabloda 18. gruba aittir. Bütün elementler arasında en düşük kaynama noktasına sahip olup sadece baskı uygulanırsa katılaştırılabilir. Kimyasal olarak atıldır ve bilinen bir bileşiği yoktur. 1868 yılında Lockyer tarafından güneş spektrumunda keşfedilmiştir.";
+  String get usage => "Balonlarda, derin dalışta ve kaynakçılıkta kullanılır. Aynı zamanda düşük sıcaklık gereken araştırmalarda kullanılır.";
 
+  String get source =>
+      "Doğal gaz yataklarında ve havada (5 ppb oranında) bulunur. Devamlı olarak uzayda kaybolur ve radyoaktif bozunma (alfa parçacıkları) ile tazelenir.";
   String get continueText => "Continue";
 
   // elements
