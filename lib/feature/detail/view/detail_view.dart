@@ -31,69 +31,82 @@ class DetailPageView extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(height: context.dynamicHeight(0.03)),
-                  Row(
-                    children: [
-                      ElementSymbolContainer(
-                        title: "He",
-                        color: AppColors().red,
-                        shadowColor: AppColors().darkRed,
-                      ),
-                      SizedBox(width: context.dynamicWidth(0.05)),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ElementInfoRow(title: "Number:  ", value: "2"),
-                          ElementInfoRow(title: "Name:  ", value: "Helium"),
-                          ElementInfoRow(title: "Weight:  ", value: "1.008"),
-                          ElementInfoRow(title: "Category:  ", value: "Reactive Nonmetal"),
-                        ],
-                      ),
-                    ],
-                  ),
+                  symbolAndInfoRow(context),
                   SizedBox(height: context.dynamicHeight(0.07)),
-                  Container(
-                    height: context.dynamicHeight(0.7),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: AppColors().darkBlue,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ElementDetailRowText(title: "Blok", value: "S"),
-                              ElementDetailRowText(title: "Periyot", value: "1"),
-                              ElementDetailRowText(title: "Grup", value: "1A"),
-                            ],
-                          ),
-                          SizedBox(height: context.dynamicHeight(0.05)),
-                          ElementInfoParagraph(
-                            title: "Tanım",
-                            paragraph: AppStrings().description,
-                          ),
-                          SizedBox(height: context.dynamicHeight(0.05)),
-                          ElementInfoParagraph(
-                            title: "Kullanım Alanları",
-                            paragraph: AppStrings().usage,
-                          ),
-                          SizedBox(height: context.dynamicHeight(0.05)),
-                          ElementInfoParagraph(
-                            title: "Kaynak",
-                            paragraph: AppStrings().source,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  elementInfoContainer(context),
                 ],
               ),
             ),
           ),
         ),
       ),
+    );
+  }
+
+  Container elementInfoContainer(BuildContext context) {
+    return Container(
+      height: context.dynamicHeight(0.7),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: AppColors().darkBlue,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElementDetailRowText(title: "Blok", value: "S"),
+                ElementDetailRowText(title: "Periyot", value: "1"),
+                ElementDetailRowText(title: "Grup", value: "1A"),
+              ],
+            ),
+            SizedBox(height: context.dynamicHeight(0.03)),
+            Divider(
+              color: AppColors().white,
+              thickness: 2,
+            ),
+            SizedBox(height: context.dynamicHeight(0.05)),
+            ElementInfoParagraph(
+              title: "Tanım",
+              paragraph: AppStrings().description,
+            ),
+            SizedBox(height: context.dynamicHeight(0.05)),
+            ElementInfoParagraph(
+              title: "Kullanım Alanları",
+              paragraph: AppStrings().usage,
+            ),
+            SizedBox(height: context.dynamicHeight(0.05)),
+            ElementInfoParagraph(
+              title: "Kaynak",
+              paragraph: AppStrings().source,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Row symbolAndInfoRow(BuildContext context) {
+    return Row(
+      children: [
+        ElementSymbolContainer(
+          title: "He",
+          color: AppColors().red,
+          shadowColor: AppColors().darkRed,
+        ),
+        SizedBox(width: context.dynamicWidth(0.05)),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ElementInfoRow(title: "Number:  ", value: "2"),
+            ElementInfoRow(title: "Name:  ", value: "Helium"),
+            ElementInfoRow(title: "Weight:  ", value: "1.008"),
+            ElementInfoRow(title: "Category:  ", value: "Reactive Nonmetal"),
+          ],
+        ),
+      ],
     );
   }
 
