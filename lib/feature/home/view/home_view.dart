@@ -10,6 +10,7 @@ import 'package:periodic_table_app/product/base/base_view.dart';
 import 'package:periodic_table_app/product/constants/color_constants.dart';
 import 'package:periodic_table_app/product/constants/strings_constant.dart';
 import 'package:periodic_table_app/product/extensions/context_extension.dart';
+import 'package:periodic_table_app/product/init/notification_api.dart';
 import 'package:periodic_table_app/product/widget/button/gradient_button.dart';
 import 'package:periodic_table_app/product/widget/container/element_container.dart';
 import 'package:periodic_table_app/product/widget/container/element_group_container.dart';
@@ -156,7 +157,7 @@ class HomeView extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () => NotificationApi.showNotification(title: "saddas", body: "ewef"),
           icon: Icon(
             Icons.star_border,
             color: AppColors().white,
