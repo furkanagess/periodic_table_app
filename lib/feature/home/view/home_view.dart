@@ -31,22 +31,20 @@ class HomeView extends StatelessWidget {
       onPageBuilder: (context, value) => Scaffold(
         backgroundColor: AppColors().background,
         appBar: buildAppbar(context),
-        body: SafeArea(
-          child: ListView(
-            padding: context.paddingNormal,
-            children: [
-              headerElementText(context),
-              clickableElementContainer(context),
-              SizedBox(height: context.dynamicHeight(0.02)),
-              headerGroupText(context),
-              SizedBox(height: context.dynamicHeight(0.02)),
-              elementGroupRowOne(context),
-              SizedBox(height: context.dynamicHeight(0.04)),
-              elementGroupRowTwo(context),
-              divider(context),
-              langAndHelpRow(context),
-            ],
-          ),
+        body: ListView(
+          padding: context.paddingNormal,
+          children: [
+            headerElementText(context),
+            clickableElementContainer(context),
+            SizedBox(height: context.dynamicHeight(0.02)),
+            headerGroupText(context),
+            SizedBox(height: context.dynamicHeight(0.02)),
+            elementGroupRowOne(context),
+            SizedBox(height: context.dynamicHeight(0.04)),
+            elementGroupRowTwo(context),
+            divider(context),
+            langAndHelpRow(context),
+          ],
         ),
       ),
     );
@@ -157,7 +155,7 @@ class HomeView extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () => NotificationApi.showNotification(title: "saddas", body: "ewef"),
+          onPressed: () => NotificationApi.showNotification(title: "saddas", body: "ewef "),
           icon: Icon(
             Icons.star_border,
             color: AppColors().white,

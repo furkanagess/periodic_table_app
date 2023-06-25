@@ -22,14 +22,12 @@ class NobleGasPageView extends StatelessWidget {
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             sliverAppbar(context),
           ],
-          body: SafeArea(
-            child: ListView(
-              padding: context.paddingNormal,
-              children: [
-                headerText(context),
-                elementsListview(),
-              ],
-            ),
+          body: ListView(
+            padding: context.paddingNormal,
+            children: [
+              headerText(context),
+              elementsListview(),
+            ],
           ),
         ),
       ),

@@ -23,14 +23,12 @@ class OtherElementsPageView extends StatelessWidget {
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
             sliverAppbar(context),
           ],
-          body: SafeArea(
-            child: ListView(
-              padding: context.paddingNormal,
-              children: [
-                headerText(context),
-                otherElementsListview(),
-              ],
-            ),
+          body: ListView(
+            padding: context.paddingNormal,
+            children: [
+              headerText(context),
+              otherElementsListview(),
+            ],
           ),
         ),
       ),

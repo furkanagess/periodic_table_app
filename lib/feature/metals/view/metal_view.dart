@@ -26,19 +26,17 @@ class MetalPageView extends StatelessWidget {
       onPageBuilder: (context, value) => Scaffold(
         backgroundColor: AppColors().background,
         appBar: buildAppbar(context),
-        body: SafeArea(
-          child: ListView(
-            padding: context.paddingNormal,
-            children: [
-              headerText(context),
-              SizedBox(height: context.dynamicHeight(0.04)),
-              metalGroupOne(context),
-              SizedBox(height: context.dynamicHeight(0.04)),
-              metalGroupTwo(context),
-              SizedBox(height: context.dynamicHeight(0.04)),
-              metalGroupThree(context),
-            ],
-          ),
+        body: ListView(
+          padding: context.paddingNormal,
+          children: [
+            headerText(context),
+            SizedBox(height: context.dynamicHeight(0.04)),
+            metalGroupOne(context),
+            SizedBox(height: context.dynamicHeight(0.04)),
+            metalGroupTwo(context),
+            SizedBox(height: context.dynamicHeight(0.04)),
+            metalGroupThree(context),
+          ],
         ),
       ),
     );

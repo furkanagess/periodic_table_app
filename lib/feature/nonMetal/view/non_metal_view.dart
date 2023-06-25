@@ -21,15 +21,13 @@ class NonMetalPageView extends StatelessWidget {
       onPageBuilder: (context, value) => Scaffold(
         backgroundColor: AppColors().background,
         appBar: buildAppbar(context),
-        body: SafeArea(
-          child: ListView(
-            padding: context.paddingNormal,
-            children: [
-              headerText(context),
-              SizedBox(height: context.dynamicHeight(0.04)),
-              nonMetalGroup(context),
-            ],
-          ),
+        body: ListView(
+          padding: context.paddingNormal,
+          children: [
+            headerText(context),
+            SizedBox(height: context.dynamicHeight(0.04)),
+            nonMetalGroup(context),
+          ],
         ),
       ),
     );
